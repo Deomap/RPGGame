@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,16 +8,26 @@ namespace RPG
 {
     class Human
     {
-        public int health;
-        public int damage;
-        public int heal;
+        protected int maxHealth;
+
+        protected int health;
+        protected int damage;
+        protected int heal;
+        public int GetHealth()
+        {
+            return health;
+        }
         public void Atack(Human enemy)
         {
             enemy.health -= this.damage;
         }
-        public void Heal(Human player)
+        public virtual void Health(Human enemy)
         {
-            player.health += this.heal;
+            enemy.health += this.heal;
+            if (enemy.health > enemy.maxHealth)
+            {
+                enemy.health = enemy.maxHealth;
+            }
         }
         public virtual void WhoIAm()
         {
