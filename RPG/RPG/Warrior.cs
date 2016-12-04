@@ -16,9 +16,9 @@ namespace RPG
             heal = 6;
             //1296
         }
-        public override void WhoIAm()
+        public override string WhoIAm()
         {
-            Console.WriteLine("Warrior");
+            return "Warrior";
         }
         public override void Health(Human enemy)
         {
