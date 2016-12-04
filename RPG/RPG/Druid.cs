@@ -16,9 +16,9 @@ namespace RPG
             heal = 17;
             //1326
         }
-        public override void WhoIAm()
+        public override string WhoIAm()
         {
-            Console.WriteLine("Druid");
+            return "Druid";
         }
 
     }
