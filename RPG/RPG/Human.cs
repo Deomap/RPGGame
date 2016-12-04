@@ -1,5 +1,3 @@
-using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,9 +27,9 @@ namespace RPG
                 enemy.health = enemy.maxHealth;
             }
         }
-        public virtual void WhoIAm()
+        public virtual string WhoIAm()
         {
-            Console.WriteLine("Human");
+           return"Human";
         }
     }
 }
