@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +10,8 @@ namespace RPG
     {
         public Warrior()
         {
-            health = 120;
+            maxHealth = 120;
+            health = maxHealth;
             damage = 18;
             heal = 6;
             //1296
@@ -18,6 +19,10 @@ namespace RPG
         public override void WhoIAm()
         {
             Console.WriteLine("Warrior");
+        }
+        public override void Health(Human enemy)
+        {
+            //ничего не должно происходить
         }
     }
 }
