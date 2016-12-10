@@ -27,7 +27,7 @@ namespace RPG
             Random rand = new Random();
             countPlayer = rand.Next(1, 3);
             Console.WriteLine("Первым ходит игрок номер "+countPlayer);
-            
+            Console.WriteLine();
             while (true)
             {
                 int round=1;
@@ -42,6 +42,7 @@ namespace RPG
                     Console.WriteLine("3) " + firstTeam[2].WhoIAm());
 
                     key =Console.ReadKey().KeyChar;
+                    Console.WriteLine();
                     switch (int.Parse(key.ToString()))
                     {
                         case 1: activePers = firstTeam[0]; break;
@@ -57,6 +58,7 @@ namespace RPG
                     Console.WriteLine("3) " + secondTeam[2].WhoIAm());
 
                     key = Console.ReadKey().KeyChar;
+                    Console.WriteLine();
                     switch (int.Parse(key.ToString()))
                     {
                         case 1: activePers = secondTeam[0]; break;
@@ -73,6 +75,7 @@ namespace RPG
                     Console.WriteLine("2) " + secondTeam[1].WhoIAm());
                     Console.WriteLine("3) " + secondTeam[2].WhoIAm());
                     key = Console.ReadKey().KeyChar;
+                    Console.WriteLine();
                     switch (int.Parse(key.ToString()))
                     {
                         case 1:firstTeam[0].Atack(secondTeam[0]); Console.WriteLine("Здоровье {0} из второй команды {1}", secondTeam[0].WhoIAm(), secondTeam[0].GetHealth()); secondTeam[0].backAtack(firstTeam[0]); break;
@@ -81,6 +84,7 @@ namespace RPG
                     }
                     Console.WriteLine("Здоровье Мага из первой команды {0}", firstTeam[0].GetHealth());
                 }
+
                 if (activePers == firstTeam[1])
                 {
                     Console.WriteLine("Ходит первый игрок");
@@ -89,6 +93,7 @@ namespace RPG
                     Console.WriteLine("2) " + secondTeam[1].WhoIAm());
                     Console.WriteLine("3) " + secondTeam[2].WhoIAm());
                     key = Console.ReadKey().KeyChar;
+                    Console.WriteLine();
                     switch (int.Parse(key.ToString()))
                     {
                         case 1: firstTeam[1].Atack(secondTeam[0]); Console.WriteLine("Здоровье {0} из второй команды {1}", secondTeam[0].WhoIAm(), secondTeam[0].GetHealth()); secondTeam[0].backAtack(firstTeam[1]); break;
@@ -97,6 +102,7 @@ namespace RPG
                     }
                     Console.WriteLine("Здоровье Воина из первой команды {0}", firstTeam[1].GetHealth());
                 }
+    
                 if (activePers == secondTeam[0])
                 {
                     Console.WriteLine("Ходит второй игрок");
@@ -113,6 +119,7 @@ namespace RPG
                     }
                     Console.WriteLine("Здоровье Мага из второй команды {0}", secondTeam[0].GetHealth());
                 }
+                Console.WriteLine();
                 if (activePers == secondTeam[1])
                 {
                     Console.WriteLine("Ходит второй игрок");
@@ -121,6 +128,7 @@ namespace RPG
                     Console.WriteLine("2) " + firstTeam[1].WhoIAm());
                     Console.WriteLine("3) " + firstTeam[2].WhoIAm());
                     key = Console.ReadKey().KeyChar;
+                    Console.WriteLine();
                     switch (int.Parse(key.ToString()))
                     {
                         case 1: secondTeam[1].Atack(firstTeam[0]); Console.WriteLine("Здоровье {0} из первой команды {1}", firstTeam[0].WhoIAm(), firstTeam[0].GetHealth()); firstTeam[0].backAtack(secondTeam[1]); break;
@@ -129,6 +137,7 @@ namespace RPG
                     }
                     Console.WriteLine("Здоровье Воина из второй команды {0}", secondTeam[1].GetHealth());
                 }
+              
                 if (activePers == firstTeam[2])
                 {
                     Console.WriteLine("Ходит первый игрок");
@@ -136,6 +145,7 @@ namespace RPG
                     Console.WriteLine("1) Лечить союзника");
                     Console.WriteLine("2) Атаковать врага");
                     key = Console.ReadKey().KeyChar;
+                    Console.WriteLine();
                     switch (int.Parse(key.ToString()))
                     {
                         case 1:
@@ -143,6 +153,7 @@ namespace RPG
                             Console.WriteLine("1) Маг");
                             Console.WriteLine("2) Воин");
                             key = Console.ReadKey().KeyChar;
+                            Console.WriteLine();
                             switch (int.Parse(key.ToString()))
                             {
                                 case 1: firstTeam[2].Health(firstTeam[0]); Console.WriteLine("Здоровье {0} из первой команды {1}", firstTeam[0].WhoIAm(), firstTeam[0].GetHealth()); break;
@@ -156,6 +167,7 @@ namespace RPG
                     Console.WriteLine("2) " + firstTeam[1].WhoIAm());
                     Console.WriteLine("3) " + firstTeam[2].WhoIAm());
                             key = Console.ReadKey().KeyChar;
+                            Console.WriteLine();
                             switch (int.Parse(key.ToString()))
                             {
                         case 1: firstTeam[2].Atack(firstTeam[0]); Console.WriteLine("Здоровье {0} из второй команды {1}", firstTeam[0].WhoIAm(), firstTeam[0].GetHealth()); break;
@@ -165,6 +177,7 @@ namespace RPG
                             break;
                 }
                 }
+          
                 if (activePers == secondTeam[2])
                 {
                     Console.WriteLine("Ходит второй игрок");
@@ -172,6 +185,7 @@ namespace RPG
                     Console.WriteLine("1) Лечить союзника");
                     Console.WriteLine("2) Атаковать врага");
                     key = Console.ReadKey().KeyChar;
+                    Console.WriteLine();
                     switch (int.Parse(key.ToString()))
                     {
                         case 1:
@@ -179,6 +193,7 @@ namespace RPG
                             Console.WriteLine("1) Маг");
                             Console.WriteLine("2) Воин");
                             key = Console.ReadKey().KeyChar;
+                            Console.WriteLine();
                             switch (int.Parse(key.ToString()))
                             {
                                 case 1: secondTeam[2].Health(secondTeam[0]); Console.WriteLine("Здоровье {0} из второй команды {1}", secondTeam[0].WhoIAm(), secondTeam[0].GetHealth()); break;
@@ -192,6 +207,7 @@ namespace RPG
                             Console.WriteLine("2) " + firstTeam[1].WhoIAm());
                             Console.WriteLine("3) " + firstTeam[2].WhoIAm());
                             key = Console.ReadKey().KeyChar;
+                            Console.WriteLine();
                             switch (int.Parse(key.ToString()))
                             {
                                 case 1: secondTeam[2].Atack(firstTeam[0]); Console.WriteLine("Здоровье {0} из первой команды {1}", secondTeam[0].WhoIAm(), firstTeam[0].GetHealth()); break;
@@ -203,32 +219,35 @@ namespace RPG
 
                 }
                 Console.WriteLine("Итог:");
-                if(firstTeam[0].GetHealth()<=0)
+                Console.WriteLine();
+                if (firstTeam[0].GetHealth()<=0)
                 {
-                    Console.WriteLine(firstTeam[0].WhoIAm()+"погиб");
+                    Console.WriteLine(firstTeam[0].WhoIAm()+" первой команды погиб");
                 }
                 if (firstTeam[1].GetHealth() <= 0)
                 {
-                    Console.WriteLine(firstTeam[1].WhoIAm() + "погиб");
+                    Console.WriteLine(firstTeam[1].WhoIAm() + " первой команды погиб");
                 }
                 if (firstTeam[2].GetHealth() <= 0)
                 {
-                    Console.WriteLine(firstTeam[2].WhoIAm() + "погиб");
+                    Console.WriteLine(firstTeam[2].WhoIAm() + " первой команды погиб");
                 }
                 if (secondTeam[0].GetHealth() <= 0)
                 {
-                    Console.WriteLine(secondTeam[0].WhoIAm() + "погиб");
+                    Console.WriteLine(secondTeam[0].WhoIAm() + " второй команды погиб");
                 }
                 if (secondTeam[1].GetHealth() <= 0)
                 {
-                    Console.WriteLine(secondTeam[1].WhoIAm() + "погиб");
+                    Console.WriteLine(secondTeam[1].WhoIAm() + " второй команды погиб");
                 }
                 if (secondTeam[2].GetHealth() <= 0)
                 {
-                    Console.WriteLine(secondTeam[2].WhoIAm() + "погиб");
+                    Console.WriteLine(secondTeam[2].WhoIAm() + " второй команды погиб");
                 }
+                Console.WriteLine();
                 Console.WriteLine("Нажмите любую клавишу для продолжения");
                 key = Console.ReadKey().KeyChar;
+                Console.WriteLine();
                 round++;
                 if((firstTeam[0].GetHealth()+ firstTeam[1].GetHealth()+ firstTeam[2].GetHealth()) <= 0)
                 {
@@ -241,6 +260,12 @@ namespace RPG
                     Console.WriteLine("Игрок 2 проиграл");
                     Console.WriteLine("Игрок 1 выиграл со счётом {0}", firstTeam[0].GetHealth() + firstTeam[1].GetHealth() + firstTeam[2].GetHealth());
                     break;
+                }
+                Console.WriteLine();
+                switch (countPlayer)
+                {
+                    case 1: countPlayer = 0;break;
+                    default: countPlayer = 1;break;
                 }
             }
             Console.ReadKey();

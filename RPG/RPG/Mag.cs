@@ -18,7 +18,7 @@ namespace RPG
         }
         public override string WhoIAm()
         {
-            return "Mage";
+            return "Маг";
         }
         public override void Health(Human enemy)
         {
