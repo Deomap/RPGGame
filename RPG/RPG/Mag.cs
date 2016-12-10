@@ -12,7 +12,7 @@ namespace RPG
         {
             maxHealth = 75;
             health = maxHealth;
-            damage = 25;
+            damage = 24;
             heal = 7;
             //1312,5
         }

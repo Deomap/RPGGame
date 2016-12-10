@@ -20,6 +20,9 @@ namespace RPG
         {
             return "Druid";
         }
-
+        public override void Health(Human enemy)
+        {
+            //ничего не должно происходить
+        }
     }
 }

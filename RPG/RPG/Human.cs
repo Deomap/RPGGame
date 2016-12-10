@@ -19,6 +19,10 @@ namespace RPG
         {
             enemy.health -= this.damage;
         }
+        public void backAtack(Human enemy)
+        {
+            enemy.health-=(this.damage)/2;
+        }
         public virtual void Health(Human enemy)
         {
             enemy.health += this.heal;

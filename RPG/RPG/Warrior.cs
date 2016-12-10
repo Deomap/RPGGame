@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,8 +13,8 @@ namespace RPG
             maxHealth = 120;
             health = maxHealth;
             damage = 18;
-            heal = 6;
-            //1296
+            heal = 8;
+           
         }
         public override string WhoIAm()
         {
