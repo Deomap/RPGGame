@@ -1,0 +1,45 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace RPG
+{
+    class Mainn
+    {
+        public void Main(string[] args)
+        {
+            Random rand = new Random();
+            Char Key;
+            Human[] firstTeam = new Human[3];
+            firstTeam[0] = new Mag();
+            firstTeam[1] = new Warrior();
+            firstTeam[2] = new Druid();
+            Human[] secondTeam = new Human[3];
+            secondTeam[0] = new Mag();
+            secondTeam[1] = new Warrior();
+            secondTeam[2] = new Druid();
+            Human activePers = firstTeam[0];
+            Console.WriteLine("Первый игрок, выберите персонажа, которым хотите играть");
+             Console.WriteLine("1) " + firstTeam[0].WhoIAm()); 
+             Console.WriteLine("2) " + firstTeam[1].WhoIAm()); 
+             Console.WriteLine("3) " + firstTeam[2].WhoIAm());
+           
+            Console.WriteLine();
+            Console.WriteLine("Второй игрок, выберите персонажа, которым хотите играть");
+            Console.WriteLine("1) " + secondTeam[0].WhoIAm());
+            Console.WriteLine("2) " + secondTeam[1].WhoIAm());
+            Console.WriteLine("3) " + secondTeam[2].WhoIAm());
+        }
+        public void nl()
+        {
+            Console.WriteLine();
+        }
+        public int persChoice(int choice)
+        {
+            swt
+            return choice;
+        }
+    }
+}
