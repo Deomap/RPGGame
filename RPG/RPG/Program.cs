@@ -32,11 +32,12 @@ namespace RPG
             Console.WriteLine("Первым ходит...");
              countPlayer = rand.Next(1, 3);
             Console.WriteLine("{0}й игрок", countPlayer);
-
+            nl();
             Console.WriteLine();
 
             while (true)
             {
+                
                 Console.WriteLine(round);
                 if (countPlayer == 1)
                 {
@@ -46,6 +47,7 @@ namespace RPG
                         case 1: activePers = firstTeam[0];firstAttack(); break;
                         case 2: activePers = firstTeam[1]; firstAttack(); break;
                         case 3: activePers = firstTeam[2];firstheal(); break;
+                      
                     }
 
                 }
@@ -57,12 +59,13 @@ namespace RPG
                         case 1: activePers = secondTeam[0]; secondAttack(); break;
                         case 2: activePers = secondTeam[1]; secondAttack(); break;
                         case 3: activePers = secondTeam[2];secondheal(); break;
+                       
                     }
  
                 }
             }
         }
-        public void nl()
+        public static void nl()
         {
             Console.WriteLine();
         }
@@ -71,8 +74,10 @@ namespace RPG
             Console.WriteLine("1) Маг");
             Console.WriteLine("2) Воин");
             Console.WriteLine("3) Друид");
-            char choose = Console.ReadKey().KeyChar;
+            // char choose = Console.ReadKey().KeyChar;
+            int choose = int.Parse(Console.ReadKey().KeyChar.ToString());
             return choose;
+
         }
         public static void firstAttack()
         {
